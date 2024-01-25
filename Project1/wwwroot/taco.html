@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="MIST353ClassExample.styles.css" asp-append-version="true" />
+    <script>
+        function hideRow(){
+            document.getElementById("tableRow1").style.display = "none";
+            document.getElementById("Hidebtn").style.display = "none";
+            document.getElementById("Unhidebtn").style.display = "inline";
+
+            function unhideRow() {
+                document.getElementById("tableRow1").style.display = "inline";
+                document.getElementById("Hidebtn").style.display = "none";
+                document.getElementById("Unhidebtn").style.display = "none";
+        }
+       
+    </script>
+</head>
+<body>
+    <h1 class="h1">Taco</h1>
+    <h2 style="color:#ff0000;">Picture of Taco</h2>
+    <img src="Taco.jpg" alt="Taco" />
+
+    <table class="myTable table">
+        <thead>
+            <tr>
+                <td>Reasons I love Tacos</td>
+                <td>Rank</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>they are yummy</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>
+                    protein
+                </td>
+                <td>
+                    2
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="myTable myRedTable table-striped">
+        <thead>
+            <tr id="tableRow1">
+                <td>Place</td>
+                <td>Rating</td>
+            </tr>
+        </thead>
+    </table>
+    <button type="button" onclick="hideRow()" id="Hidebtn">HideRow</button>
+    <button type="button" onclick="unhideRow()" id="Unhidebtn">UnhideRow</button>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
